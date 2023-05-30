@@ -1,0 +1,25 @@
+input_type: "image"
+semantic_segmentation_cfg: ["resnet101", "deeplab"]
+max_instances: 50
+mask_opening_size: 20 # Morphology to remove False Negatives
+mask_dilation_size: 20 # Morphology to expand mask
+background_class_threshold: 0.66 # Threshold for backgroudn detection
+foreground_class_threshold: 0.33 # Threshold for foreground detection
+instance_confidence_threshold: 0.2
+
+# class indexes
+semseg_idx:
+  deeplab: ['chair', 'couch', 'potted plant', 'bed', 'mirror', 'dining table', 'window',
+  'desk', 'book', 'clock', 'vase', 'diningtable', 'bottle', 'cup', 'handbag','cabinet', 'pottedplant',
+ 'table', 'sofa', 'plant', 'tvmonitor',"chair",'painting','lounge','shelf','mirror','carpet','armchair',
+ 'seat','desk','closet','press','lamp','bathtub','bathing','tub','cushion','pedestal','chest','drawers',
+ 'chest','bureau','sink','refrigerator','stand','case','showcase','pillow','staircase','bookcase','blind',
+ 'can','flower','bench','countertop','stove','palm','computer','chair','towel','chandelier','pendant','pendent',
+ 'lamp','bottle','buffet','counter','sideboard','fountain','washer','washer','washing','stool','bag','oven',
+ 'microwave','microwave','oven','pot','blanket','sculpture','vase','trash','can','garbage','fan','crt','plate',
+ 'monitor','glass','clock','']
+
+
+# Inpainting
+crfill:
+  weights_path: 'weights/crfill/model_256.pth'
