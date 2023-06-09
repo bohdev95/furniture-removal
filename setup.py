@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='auto-object-removal',
+    name='furniture-removal',
     version='0.0.0',
     author='fmintus',
-    description='auto-object-removal',
+    description='furniture-removal',
     packages = find_packages(exclude=("tests*")),
 )

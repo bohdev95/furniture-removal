@@ -30,14 +30,3 @@ ipython_config.py
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
 
-# Weights
-*.pth
-
-# Images
-*.png
-*.jpg
-!samples/images/*
-!samples/GUI/*
-
-# App files
-app_files

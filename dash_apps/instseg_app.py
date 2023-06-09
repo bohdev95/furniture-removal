@@ -31,7 +31,7 @@ for path in [UPLOAD_DIRECTORY, RESULTS_DIRECTORY, SEM_MASKS_DIRECTORY, MISC_DIRE
         rmtree(path)
     os.makedirs(path)
 
-copyfile('samples/images/white_blank.png','app_files/sem_masks/white_blank.png')
+copyfile('images/white_blank.png','app_files/sem_masks/white_blank.png')
 
 config_path = os.path.join("config", "default.yaml")
 segmentor = InstSegMaskRcnn(config_path)
